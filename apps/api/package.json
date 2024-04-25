@@ -1,0 +1,9 @@
+{
+  "name": "waydines-api",
+  "type": "module",
+  "scripts": {
+    "dev": "cargo watch -x 'shuttle run'",
+    "build": "cargo shuttle deploy",
+    "type-check": "cargo clippy"
+  }
+}
