@@ -9,6 +9,64 @@ const language = (Astro.currentLocale ?? defaultLanguage) as Language
 <Layout title="Home">
     <Nav lang={language} client:load />
     <main class="max-w-screen-xl m-auto px-8">
-        <h1>HIII</h1>
+        <section class="h-[calc(100vh-4rem)]">
+            <div>
+                <h1 id="first-anim">
+                    <span class="text-transparent">Bem-vindo</span>
+                    <span class="text-transparent">à</span>
+                    <span class="text-transparent">Waydines</span>
+                </h1>
+                <h1 id="second-anim">
+                    <span class="text-transparent">Um</span>
+                    <span class="text-transparent">país</span>
+                    <span class="text-transparent">para</span>
+                    <span class="text-transparent">quem</span>
+                    <span class="text-transparent">quer</span>
+                    <span class="text-transparent">inovar</span>
+                </h1>
+            </div>
+        </section>
     </main>
 </Layout>
+
+<style>
+    @keyframes text-appear {
+        from {
+            transform: translateY(-16px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    span.text-appear {
+        color: var(--foreground) !important;
+        animation-name: text-appear;
+        animation-duration: 1s;
+    }
+</style>
+
+<script>
+    const anims = {
+        "first-anim": 0,
+        "second-anim": 2,
+    } as const
+
+    Object.keys(anims).forEach((id) => {
+        const elem = document.getElementById(id)! as HTMLHeadingElement
+
+        for (let i = 0; i < elem.childElementCount; i++) {
+            const timeout = (i / 10 + anims[id as keyof typeof anims]) * 1000
+            const span = elem.querySelectorAll("span")[i]!
+
+            ;(async () => {
+                setTimeout(() => {
+                    span.classList.add("text-appear")
+                }, timeout)
+            })()
+        }
+    })
+</script>

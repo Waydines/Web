@@ -28,7 +28,7 @@ export default function ({ lang }: Props) {
   const organs = t('nav.governmentTab') as Component[]
 
   return (
-    <NavigationMenu className="w-full py-3">
+    <NavigationMenu className="w-full py-3 backdrop-blur-xl backdrop-saturate-[1.2] bg-background/50">
       <div className="w-full max-w-screen-xl px-8 flex justify-between">
         <NavigationMenuList>
           <NavigationMenuItem>
@@ -96,7 +96,7 @@ export default function ({ lang }: Props) {
         <NavigationMenuList className="gap-2">
           <NavigationMenuItem>
             <a href="/docs">
-              <NavigationMenuLink className={buttonVariants({ variant: "outline" })}>
+              <NavigationMenuLink className={cn(buttonVariants({ variant: "outline" }), "bg-transparent")}>
                 Log-in
               </NavigationMenuLink>
             </a>
