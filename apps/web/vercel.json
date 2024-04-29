@@ -1,5 +1,5 @@
 {
     "$schema": "https://openapi.vercel.sh/vercel.json",
     "installCommand": "bun install",
-    "buildCommand": "turbo build"
+    "buildCommand": "cd ../.. && bunx --bun turbo build --filter=web"
 }

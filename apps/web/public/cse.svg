@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style type="text/css">
+        .path {
+          fill: hsl(0 0% 3.9%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+          .path {
+            fill: hsl(0 0% 98%);
+        }
+    </style>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="249.911" y1="0.391" x2="249.911" y2="501.493" id="gradient-0">
+      <style type="text/css">
+        .stop0 {
+          stop-color: rgba(230, 222, 199, 1);
+        }
+        .stop1 {
+          stop-color: rgba(199, 181, 128, 1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+          .stop0 {
+            stop-color: rgba(230, 222, 199, 1);
+          }
+          .stop1 {
+            stop-color: rgba(199, 181, 128, 1);
+          }
+        }
+      </style>
+      <stop offset="0" class="stop0"/>
+      <stop offset="1" class="stop1"/>
+    </linearGradient>
+  </defs>
+  <path class="path" style="stroke: rgb(0, 0, 0); stroke-opacity: 0;" d="M 30.492 293.679 L 163.426 293.237 C 258.252 285.013 355.06 155.522 358.806 51.369 L 382.681 67.135 L 383.03 496.78 L 359.154 500.55 L 358.108 493.031 C 341.876 376.78 241.113 328.642 163.426 320.566 L 38.46 321.079 C 41.586 339.818 92.591 469.4 249.068 475.466 C 412.52 460.832 474.532 297.111 470.807 241.304 C 466.558 109.059 349.652 32.073 254.658 27.64 C 109.944 27.01 28.593 155.54 26.252 253.387 L -0.621 232.609 L 0.474 0.391 L 500.514 0.391 L 499.318 501.094 L 0.474 501.493 L -0.692 232.254 C -0.645 232.254 31.892 247.525 25.816 247.525 L 30.492 293.679 Z" transform="matrix(1.0000000000000002, 0, 0, 1.0000000000000002, 2.2737367544323206e-13, 5.684341886080802e-14)"/>
+</svg>
